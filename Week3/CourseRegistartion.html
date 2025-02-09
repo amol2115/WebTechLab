@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="overall">
+    <header><img src="./CBITLogo.png" class="img">  
+        <div class="heading">Chaitanya Bharathi Institue of Technology</div><br>
+        <div class="subheading">Chaitanya Bharathi P.O., Kokapet (V), Gandipet (M), Hyderabad - 500 075, Telangana State
+        Phone No: 040-24193280; Fax No: 040 – 24193278; Website: www.cbit.ac.in</div></header>
+    <h2>Registration Form </h2>
+    <form>
+        <div class="field">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+        </div>
+        <div class="field">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name" required><br>
+        </div>
+        <div class="field">
+        <label for="rollno">Roll No.:</label>
+        <input type="number" id="rollno" name="rollno" placeholder="Enter Roll No." required><br>
+        </div>
+        <div class="field">
+        <label for="program">Name of the Program:</label>
+        <input type = "radio" id="be" name="program" value="BE">
+        <label for = "be">BE</label>
+        <input type = "radio" id="btech" name="program" value="BTech">
+        <label for = "btech">BTech</label>
+        </div>
+        <div class="field">
+        <label for = "sem">Semester: </label>
+            <select name="sem" id="sem">
+                <option value="">Select Semester</option>
+                <option value="1">I</option>
+                <option value="2">II</option>
+                <option value="3">III</option>
+                <option value="4">IV</option>
+                <option value="5">V</option>
+                <option value="6">VI</option>
+                <option value="7">VII</option>
+                <option value="8">VIII</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="phno">Phone:</label>
+            <input type="number" id="phno" name="phno" placeholder="Enter your phone number" maxlength="10" required><br>
+        </div>
+        <div class="field">
+            <label for="mail">Email ID:</label>
+            <input type="email" id="mail" name="mail" placeholder="Enter your mail id" required><br>
+        </div>
+        <div class="field">
+            <label for="status">Select satus of payment: </label>
+            <input type = "radio" id="paid" name="status" value="Paid">
+            <label for = "paid">Paid</label>
+            <input type = "radio" id="notpaid" name="status" value="Not Paid">
+            <label for = "not paid">Not Paid</label>
+            <!--  -->
+        </div>
+        <div class="field">
+            <label for="payment-date">Date of payment: </label>
+            <input type = "date" id="payment-date" name="payment-date">
+        </div>
+        <div class="field">
+            <label for="mop">Mode of Payment: </label>
+            <input type = "radio" id="nb" name="mop" value="Net Banking">
+            <label for = "nb">Net Banking</label>
+            <input type = "radio" id="upi" name="mop" value="UPI">
+            <label for = "upi">UPI</label>
+            <input type = "radio" id="card" name="mop" value="Card">
+            <label for = "card">Card</label>
+        </div>
+        <div class="field">
+            <label for="receipt-no">Receipt No.: </label>
+            <input type="number" id="receipt-no" name="receipt-no" placeholder="Enter receipt no.">
+        </div>
+        <div class="field">
+            <label for = "proof">Attach proof of payment: </label>
+            <input type="file" id = "proof" name = "proof">
+        </div>
+    </form>
+    </div>
+</body>
+</html>

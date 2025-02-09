@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Enquiry Form</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="overall">
+    <header><img src="./CBITLogo.png">  
+        <div class="heading">Chaitanya Bharathi Institue of Technology</div><br>
+        <div class="subheading">Chaitanya Bharathi P.O., Kokapet (V), Gandipet (M), Hyderabad - 500 075, Telangana State
+        Phone No: 040-24193280; Fax No: 040 – 24193278; Website: www.cbit.ac.in</div></header>
+    <h2>Admission Enquiry Form</h2>
+    <form>
+    <div class="field">
+        <label for="doe">Date of Enquiry: </label>
+        <input type="date" name="doe" id="doe" disabled>
+    </div>
+    <div class="field">
+        <label for="fname" >Full Name of student: </label>
+        <input type="text" name="fname" id="fname" placeholder="Enter full name">
+    </div>
+    <div class="field">
+        <label for="gender">Gender: </label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for = "male">Male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for = "female">Female</label>
+        <input type="radio" name="gender" id="pns" value="pns">
+        <label for = "pns">Prefer Not to Say</label>
+    </div>
+    <div class="field">
+        <label for = "dob">Date of Birth: </label>
+        <input type = "date" id = "dob" name = "dob">
+    </div>
+    <div class="field">
+        <label for = "age">Age: </label>
+        <input type = "number" id = "age" name = "age" placeholder="Enter age">
+    </div>
+    <div class="field">
+        <label for="address">Address:</label><br>
+        <textarea placeholder="Enter address"></textarea>
+    </div>
+    <div class="field">
+        <label for = "mobile">Phone no.: </label>
+        <input type = "number" id = "mobile" name = "mobile" placeholder="Enter phone number">
+    </div>
+    <div class="field">
+        <label for = "pmobile">Guardian Phone no.: </label>
+        <input type = "number" id = "pmobile" name = "pmobile" placeholder="Enter guardian phone no.">
+    </div>
+    <div class="field">
+        <label for = "rank">EAMCET Rank: </label>
+        <input type = "number" id = "rank" name = "rank" placeholder="Enter EAMCET rank">
+    </div>
+    <div class="field">
+        <label for = "rankcard">Upload Rank Card: </label>
+        <input type = "file" id = "rankcard" name = "rankcard">
+    </div>
+    <div class="field">
+        <label for = "branches">Select branches you want to enroll in: </label><br>
+        <input type="checkbox" id = "cse" name = "branch" value = "CSE">
+        <label for = "cse">CSE</label><br>
+        <input type="checkbox" id = "it" name = "branch" value = "IT">
+        <label for = "it">IT</label><br>
+        <input type="checkbox" id = "ece" name = "branch" value = "ECE">
+        <label for = "ece">ECE</label><br>
+        <input type="checkbox" id = "eee" name = "branch" value = "EEE">
+        <label for = "eee">EEE</label><br>
+        <input type="checkbox" id = "mech" name = "branch" value = "Mechanical">
+        <label for = "mech">Mechanical</label><br>
+        <input type="checkbox" id = "civil" name = "branch" value = "civil">
+        <label for = "civil">Civil</label><br>
+        <input type="checkbox" id = "aiml" name = "branch" value = "AIML">
+        <label for = "aiml">AIML</label><br>
+        <input type="checkbox" id = "aids" name = "branch" value = "AIDS">
+        <label for = "aids">AIDS</label><br>
+    </div>
+    <div class="field">
+        <label for = "query">Queries: </label><br>
+        <textarea placeholder="Type your queries here" style="width:900px; height: 200px;"></textarea>
+    </div>
+    <div class="button-container">
+    <button type="submit">Submit</button>
+    </div>
+    </form>
+    <div style:>
+    <p>Note that by filling this form, your seat is not confirmed. It just reflects your interests.</p></div>
+    <footer>
+        <h5>&copy; CBIT</h5>
+    </footer>
+</div>
+</body>
+</html>

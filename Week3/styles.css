@@ -92,5 +92,6 @@ button{
     border: 5px solid rgb(69, 69, 128);
     padding: 40px;
 }
-
-
+footer{
+    font-family: sans-serif;
+}

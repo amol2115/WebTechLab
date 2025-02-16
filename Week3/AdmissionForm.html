@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="overall">
+    <header><img src="./CBITLogo.png" class="img">  
+        <div class="heading">Chaitanya Bharathi Institue of Technology</div><br>
+        <div class="subheading">Chaitanya Bharathi P.O., Kokapet (V), Gandipet (M), Hyderabad - 500 075, Telangana State
+        Phone No: 040-24193280; Fax No: 040 – 24193278; Website: www.cbit.ac.in</div></header>
+    <h2>Admission Form </h2>
+    <form>
+        <div class="field">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name" required><br>
+        </div>
+        <div class="field">
+            <label for = "dob">Date of Birth: </label>
+            <input type = "date" id = "dob" name = "dob">
+        </div>
+        <div class="field">
+            <label for = "mobile">Phone no.: </label>
+            <input type = "number" id = "mobile" name = "mobile" placeholder="Enter phone number">
+        </div>
+        <div class="field">
+            <label for="mail">Email ID:</label>
+            <input type="email" id="mail" name="mail" placeholder="Enter your mail id" required><br>
+        </div>
+        <div class="field">
+            <label for="gname">Guardian Name:</label>
+            <input type="text" id="gname" name="gname" placeholder="Enter Guardian's Name" required><br>
+        </div>
+        <div class="field">
+            <label for = "pmobile">Guardian Phone no.: </label>
+            <input type = "number" id = "pmobile" name = "pmobile" placeholder="Enter guardian phone no.">
+        </div>
+       
+        
+        <div class="field">
+            <p style="font-size: 20px;">Attach the following documents -</p> 
+            <label for = "idproof">Government ID proof: </label>
+            <input type="file" id = "idproof" name = "idproof"> <br>
+            <label for = "alorder">Final Allotment Order: </label>
+            <input type="file" id = "alorder" name = "alorder"> <br>
+            <label for = "rankcard">EAMCET Rank Card: </label>
+            <input type="file" id = "rankcard" name = "rankcard"> <br>
+            <label for = "report">XII Report: </label>
+            <input type="file" id = "report" name = "report"> <br>
+            <label for = "tc">Transfer Certificate: </label>
+            <input type="file" id = "tc" name = "tc"> <br>
+            <label for = "roc">Receipt of Certificates: </label>
+            <input type="file" id = "roc" name = "roc"> <br>
+        </div>
+    
+    <div class="button-container">
+        <button type="submit">Submit</button>
+        </div>
+        </form>
+        <div style="font-family: sans-serif; ">
+        <p style="font-size: 20px; font-weight: bold;">Note: Kindly produce the above certificates along with photocopies during the day of Certificate verification. </p></div>
+        <footer>
+            <h5>&copy; CBIT</h5>
+        </footer>
+    </div>
+    </div>
+</body>
+</html>

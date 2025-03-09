@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Navigation - Modify Element</title>
+    <style>
+      .product {
+        border: 2px solid black;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        margin: 20px auto;
+      }
+      #price {
+        font-size: 20px;
+        font-weight: bold;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <h2>Wireless Headphones</h2>
+      <p id="price">$100</p>
+      <button onclick="applyDiscount()">Apply Discount</button>
+    </div>
+    <script>
+      function applyDiscount() {
+        // Navigate to the price element
+        let priceElement = document.getElementById("price");
+        // Modify the price content
+        priceElement.innerHTML = "$80"; // New discounted price
+        // Change style to indicate discount applied
+        priceElement.style.color = "green";
+        priceElement.style.fontSize = "24px";
+      }
+    </script>
+  </body>
+</html>

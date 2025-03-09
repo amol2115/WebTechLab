@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Methods Demo</title>
+  </head>
+  <body>
+    <h2>Window Object Methods Demonstration</h2>
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="showConfirm()">Confirm</button>
+    <button onclick="showPrompt()">Prompt</button>
+    <button onclick="openNewWindow()">Open Window</button>
+    <button onclick="closeNewWindow()">Close Window</button>
+    <button onclick="startTimeout()">Set Timeout</button>
+
+    <script>
+      let newWindow;
+
+      function showAlert() {
+        alert("This is an alert box!");
+      }
+
+      function showConfirm() {
+        let result = confirm("Do you want to proceed?");
+        alert("User selected: " + (result ? "OK" : "Cancel"));
+      }
+
+      function showPrompt() {
+        let userInput = prompt("Please enter your name:", "Guest");
+        alert("Hello, " + (userInput ? userInput : "Guest") + "!");
+      }
+
+      function openNewWindow() {
+        newWindow = window.open("https://www.example.com", "_blank", "width=600,height=400");
+      }
+
+      function closeNewWindow() {
+        if (newWindow) {
+          newWindow.close();
+        } else {
+          alert("No window to close.");
+        }
+      }
+
+      function startTimeout() {
+        setTimeout(function() {
+          alert("This alert appeared after a delay!");
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

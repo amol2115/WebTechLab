@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnSubmit Event Demo</title>
+    <script>
+      function validateForm(event) {
+        event.preventDefault(); // Prevents the form from submitting
+        let name = document.getElementById("name").value;
+        if (name === "") {
+          alert("Name cannot be empty!");
+        } else {
+          alert("Form submitted successfully with name: " + name);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>OnSubmit Event Demonstration</h2>
+    <form onsubmit="validateForm(event)">
+      <label for="name">Enter your name:</label>
+      <input type="text" id="name" name="name">
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time Demo</title>
+    <script>
+      function showDateTime() {
+        let now = new Date();
+        let date = now.toDateString();
+        let time = now.toLocaleTimeString();
+        document.getElementById("dateTime").textContent = "Date: " + date + " | Time: " + time;
+      }
+
+      function updateTime() {
+        let now = new Date();
+        document.getElementById("clock").textContent = now.toLocaleTimeString();
+      }
+
+      setInterval(updateTime, 1000);
+    </script>
+  </head>
+  <body onload="showDateTime()">
+    <h2>Date and Time Demonstration</h2>
+    <p id="dateTime"></p>
+    <h3>Live Clock:</h3>
+    <p id="clock"></p>
+    <button onclick="showDateTime()">Refresh Date & Time</button>
+  </body>
+</html>

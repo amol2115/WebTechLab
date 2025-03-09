@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mouse Coordinates</title>
+  </head>
+  <body>
+    <h2 onclick="showCoords(event)">
+      Click this heading to get the x and y coordinates of the mouse pointer when it was clicked.
+    </h2>
+    <p>Tip: Try to click different places in the heading.</p>
+    <p id="demo"></p>
+
+    <script>
+      function showCoords(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        var coords = "X coords: " + x + ", Y coords: " + y;
+        document.getElementById("demo").innerHTML = coords;
+      }
+    </script>
+  </body>
+</html>

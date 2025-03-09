@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Football Score</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      .scoreboard {
+        width: 50%;
+        margin: auto;
+        padding: 20px;
+        border: 2px solid black;
+        background-color: #f4f4f4;
+      }
+      .team {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px;
+      }
+      .score {
+        font-size: 40px;
+        color: blue;
+      }
+      .highlight {
+        color: red;
+        font-weight: bold;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Live Football Score</h1>
+    <div class="scoreboard">
+      <p class="team">Team A: <span id="scoreA" class="score">0</span></p>
+      <p class="team">Team B: <span id="scoreB" class="score">0</span></p>
+      
+    </div>
+    <button onclick="goalScored('A')">Goal Scored by Team A</button>
+    <button onclick="goalScored('B')">Goal Scored by Team B</button>
+    <button onclick="reset()">Reset Score</button>
+    <div class="timeContainer">Match Time: <span class="timer" id="matchTimer">0:00</span></div>
+    <button onclick="startTimer()">Start Match</button>
+    <p class="foul">Fouls Committed by Team A: <span id="foulA" class="foul">0</span></p>
+    <p class="foul">Fouls Committed by Team B: <span id="foulB" class="foul">0</span></p>
+    <button onclick="foulCommited('A')">Foul by Team A</button>
+    <button onclick="foulCommited('B')">Foul by Team B</button>
+    <script>
+      let matchTime = 0;
+      function goalScored(team) {
+        let scoreElement = document.querySelector("#score" + team);
+        let allScores = document.querySelectorAll(".score");
+
+        let currentScore = parseInt(scoreElement.innerHTML);
+        scoreElement.innerHTML = currentScore + 1;
+
+        allScores.forEach(score => score.classList.remove("highlight"));
+
+        scoreElement.classList.add("highlight");
+
+        setTimeout(() => {
+          scoreElement.classList.remove("highlight");
+        }, 1000);
+      }
+      function reset(){
+        let scores = document.querySelectorAll(".score");
+        scores.forEach(score => {score.innerHTML=0;});
+      }
+      function startTimer() {
+        timerInterval = setInterval(function() {
+          matchTime++;
+          let minutes = Math.floor(matchTime / 60);
+          let seconds = matchTime % 60;
+          document.getElementById('matchTimer').innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }, 1000);
+      }
+      function foulCommited(team) {
+        // Select the correct score element
+        let foul = document.querySelector("#foul" + team);
+        let allFouls = document.querySelectorAll(".foul");
+
+        // Increase the score by 1
+        let foulCount = parseInt(foul.innerHTML);
+        foul.innerHTML = foulCount + 1;
+      }
+
+    </script>
+  </body>
+</html>

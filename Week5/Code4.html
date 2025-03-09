@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnLoad and Unload Events Demo</title>
+    <script>
+      function pageLoaded() {
+        alert("Page has loaded successfully!");
+      }
+    //   function pageUnloaded() {
+    //     alert("Page is unloading. Goodbye!");
+    //   }
+      window.addEventListener('beforeunload', function() {
+        alert("Page is unloading. Goodbye!");
+      });
+    </script>
+  </head>
+  <body onload="pageLoaded()" >
+    <h2>OnLoad and Unload Events Demonstration</h2>
+    <p>Open this page to see the onLoad event in action. Close or reload to trigger the unload event.</p>
+  </body>
+</html>

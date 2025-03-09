@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//w3c//DTD XHTML 1.1//EN" 
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- dynamic.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Manipulating Tables</title>
+    <script type="text/javascript">
+      function addRow(tableId, c) {
+        var tabEle = document.getElementById(tableId);
+        var newRow = tabEle.insertRow(tabEle.rows.length);
+        console.log(tabEle.rows.length);
+        var newCell;
+        for (var i = 0; i < c.length; i++) {
+          console.log(newRow.cells.length);
+          newCell = newRow.insertCell(newRow.cells.length);
+          newCell.innerHTML = c[i];
+        }
+        return newRow;
+      }
+    </script>
+  </head>
+  <body>
+    <table id="tblPeople" border="1">
+      <tr>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+      </tr>
+    </table>
+    <hr>
+    <form name="formName">
+      First Name: <input type="text" name="FirstName">
+      Middle Name: <input type="text" name="MiddleName">
+      Last Name: <input type="text" name="LastName">
+      <br>
+      <br>
+      <center>
+        <input type="button" value="Add Name" 
+          onclick="addRow('tblPeople', 
+          [this.form.FirstName.value, 
+           this.form.MiddleName.value, 
+           this.form.LastName.value]);">
+      </center>
+      <hr>
+    </form>
+  </body>
+</html>

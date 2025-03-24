@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<body>
+    <form>
+        <label for="num">Enter Number: </label>
+        <input type="number" id="num" name="num" required>
+        <button type="submit" onclick="getTable()">Get Table</button>
+    </form>
+    <p id = "demo"></p>
+    <script>   
+        function getTable(){
+            event.preventDefault();
+            var ans="";
+            var n=document.getElementById("num").value;
+            if (n===""){
+                ans="Enter a number"; 
+            } else{
+                for (let i=1; i<=10; i++){
+                    ans = ans + n + " * " + i + " = " + (n*i) + "<br>";
+                    console.log(ans);
+                }
+            }
+            document.getElementById("demo").innerHTML = ans;
+        }
+    </script>
+</body>
+</html>

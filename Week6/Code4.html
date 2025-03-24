@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+    <style>
+        #img {
+            position: absolute;
+        }
+        #twin {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+        #newImage {
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+<body onload="moveImg()">
+    <img src="plane.jfif" alt="Plane" id="img">
+    <img src="twin.jfif" alt="Twin" id="twin">
+    
+    <!-- New Image that will appear after collision -->
+    <img src="newimage.jfif" alt="New Image" id="newImage">
+
+    <script>
+        let img = document.getElementById("img");
+        let twin = document.getElementById("twin");
+        let newImage = document.getElementById("newImage");
+        let x = 0;
+        let finalX = window.innerWidth;
+
+        // Get the position of the twin image
+        let twinRect = twin.getBoundingClientRect();
+        let twinLeft = twinRect.left;
+        let twinRight = twinRect.right;
+        let twinTop = twinRect.top;
+        let twinBottom = twinRect.bottom;
+
+        const moveImg = () => {
+            // Get the position of the moving image
+            let imgRect = img.getBoundingClientRect();
+            let imgLeft = imgRect.left;
+            let imgRight = imgRect.right;
+            let imgTop = imgRect.top;
+            let imgBottom = imgRect.bottom;
+
+            // Check if the moving image touches the twin image
+            if (imgRight >= twinLeft && imgLeft <= twinRight && imgTop <= twinBottom && imgBottom >= twinTop) {
+                // Show the new image at the position of the twin image
+                newImage.style.left = twinLeft + 'px';
+                newImage.style.top = twinTop + 'px';
+                img.style.display = 'none';
+                newImage.style.display = 'block';  // Make the new image visible
+
+            }
+
+            // Move the image horizontally
+            if (x < finalX) {
+                x += 3;
+                img.style.left = x + 'px';
+                setTimeout(moveImg, 10);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerRank Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar a {
+            color: white !important;
+        }
+        .hero {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .section {
+            padding: 40px 0;
+        }
+        .card button {
+            width: 100%;
+        }
+        .leaderboard-table {
+            width: 100%;
+        }
+        .contact {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">HackerRank</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#problems">Problems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#leaderboard">Leaderboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home" class="hero">
+        <h1>Become a Coding Ninja</h1>
+        <p>Solve challenges, earn points, and climb the leaderboard!</p>
+    </div>
+
+    <div id="problems" class="container section">
+        <h3>Latest Problems</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Problem 1</h5>
+                    <p>Description of problem 1.</p>
+                    <button class="btn btn-primary">Solve Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Problem 2</h5>
+                    <p>Description of problem 2.</p>
+                    <button class="btn btn-primary">Solve Now</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Problem 3</h5>
+                    <p>Description of problem 3.</p>
+                    <button class="btn btn-primary">Solve Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="challenges" class="container section">
+        <h3>Coding Challenges</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Challenge 1</h5>
+                    <p>Description of coding challenge 1.</p>
+                    <button class="btn btn-primary">Start Challenge</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Challenge 2</h5>
+                    <p>Description of coding challenge 2.</p>
+                    <button class="btn btn-primary">Start Challenge</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Challenge 3</h5>
+                    <p>Description of coding challenge 3.</p>
+                    <button class="btn btn-primary">Start Challenge</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="leaderboard" class="container section">
+        <h3>Leaderboard</h3>
+        <table class="table leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>JohnDoe</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>JaneSmith</td>
+                    <td>900</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>MarkJohnson</td>
+                    <td>800</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="contact" class="container section contact">
+        <h3>Contact Us</h3>
+        <p>For inquiries or support, please contact us:</p>
+        <p>Email: info@hackerrank.com</p>
+        <p>Phone: +1234567890</p>
+        <p>Address: 123 Street, City, Country</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

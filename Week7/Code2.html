@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of tables</title>
+</head>
+<body>
+    <form>
+        <label for="rows">Enter Rows: </label>
+        <input type="number" id="rows" name="rows" required>
+        <label for="cols">Enter Columns: </label>
+        <input type="number" id="cols" name="cols" required>
+        <button type="submit" onclick="getTable()">Get Table</button>
+    </form>
+    <table id="multiplication-table" border="1"></table>
+    <script>
+        function getTable() {
+            event.preventDefault();
+            let rows = document.getElementById('rows').value;
+            let col = document.getElementById('cols').value;
+
+            rows = (rows && rows > 0) ? parseInt(rows) : 10;
+            col = (col && col > 0) ? parseInt(col) : 10;
+
+            let table = document.getElementById('multiplication-table');
+            table.innerHTML = ''; 
+
+            for (let i = 1; i <= rows; i++) {
+                let row = table.insertRow();
+                for (let j = 1; j <= col; j++) {
+                    let cell = row.insertCell();
+                    cell.textContent = i * j;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

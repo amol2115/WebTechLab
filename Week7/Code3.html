@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion</title>
+</head>
+<body>
+    <form>
+        <label for="fah">Enter temperature in Fahrenheit: </label>
+        <input type="number" id="fah" name="fah" required>
+        <button type="submit" onclick="toCelsius()">Convert to Celsius</button>
+    </form>
+    <p id="ans"></p>
+    <script>
+        function toCelsius(){
+            event.preventDefault();
+            let f = document.getElementById("fah").value;
+            document.getElementById("ans").innerHTML = "Equivalent temperature in degree Celsius is: "+ ((f-32)*(5/9));
+        }
+    </script>
+</body>
+</html>

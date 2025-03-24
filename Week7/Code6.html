@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+    <h2>Pizza Order Form</h2>
+    <table border="1">
+        <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>Chicken Pizza</td>
+            <td>100</td>
+            <td><input type="number" id="chickenQty" min="0" oninput="calculateTotal()"></td>
+        </tr>
+        <tr>
+            <td>Paneer Pizza</td>
+            <td>80</td>
+            <td><input type="number" id="paneerQty" min="0" oninput="calculateTotal()"></td>
+        </tr>
+        <tr>
+            <td>Veg Pizza</td>
+            <td>70</td>
+            <td><input type="number" id="vegQty" min="0" oninput="calculateTotal()"></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <label>Total Cost: </label>
+    <input type="text" id="totalCost" readonly>
+
+    <br><br>
+
+    <button onclick="confirmOrder()">Confirm Order</button>
+    <button onclick="cancelOrder()">Cancel Order</button>
+
+    <script>
+        function calculateTotal() {
+            let chickenPizzaPrice = 100;
+            let paneerPizzaPrice = 80;
+            let vegPizzaPrice = 70;
+
+            let chickenQty = document.getElementById("chickenQty").value || 0;
+            let paneerQty = document.getElementById("paneerQty").value || 0;
+            let vegQty = document.getElementById("vegQty").value || 0;
+
+            let totalCost = (chickenPizzaPrice * chickenQty) +
+                            (paneerPizzaPrice * paneerQty) +
+                            (vegPizzaPrice * vegQty);
+
+            document.getElementById("totalCost").value = totalCost;
+        }
+
+        function confirmOrder() {
+            alert("Your order is confirmed. It will reach you in 10 minutes.");
+        }
+
+        function cancelOrder() {
+            document.getElementById("chickenQty").value = "";
+            document.getElementById("paneerQty").value = "";
+            document.getElementById("vegQty").value = "";
+            document.getElementById("totalCost").value = "";
+        }
+    </script>
+
+</body>
+</html>
